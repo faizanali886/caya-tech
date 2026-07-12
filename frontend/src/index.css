@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --surface: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 19% 35%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --coral: 0 93% 70%;
+    --coral-foreground: 0 0% 100%;
+    --nexus: 199 89% 48%;
+    --nexus-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+    --radius: 0.75rem;
+  }
+  .dark {
+    --background: 222 64% 5%;
+    --foreground: 210 40% 98%;
+    --surface: 222 47% 11%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --coral: 0 100% 76%;
+    --coral-foreground: 222 47% 11%;
+    --nexus: 199 95% 60%;
+    --nexus-foreground: 222 47% 11%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 213 27% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Manrope", system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, .font-display {
+    font-family: "Outfit", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+  .font-mono, code {
+    font-family: "JetBrains Mono", monospace;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    background: hsl(var(--coral) / 0.25);
+  }
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .label-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground;
+  }
+  .glass {
+    background: hsl(var(--background) / 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .text-coral { color: hsl(var(--coral)); }
+  .text-nexus { color: hsl(var(--nexus)); }
+  .bg-coral { background-color: hsl(var(--coral)); }
+  .bg-nexus { background-color: hsl(var(--nexus)); }
+  .container-px { @apply px-5 sm:px-8 lg:px-12; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  70% { transform: scale(1.25); opacity: 0; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+.pulse-ring { animation: pulse-ring 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+
+@keyframes dash {
+  to { stroke-dashoffset: -1000; }
+}
+.flow-line { stroke-dasharray: 6 8; animation: dash 24s linear infinite; }
+
+[data-debug-wrapper="true"] { display: contents !important; }

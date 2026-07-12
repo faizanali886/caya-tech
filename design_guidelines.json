@@ -1,0 +1,98 @@
+{
+  "theme_and_archetype": {
+    "primary_theme": "Light & Dark Toggle",
+    "archetype": "Archetype 4: Swiss & High-Contrast mixed with Archetype 5 (Luxury/Enterprise).",
+    "core_identity": "Premium corporate tech leader, sovereign-grade trust, Caribbean relevance, enterprise scale.",
+    "emotion": "Authoritative, Innovative, Scalable, Trustworthy"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "mono_font": "JetBrains Mono",
+    "rules": {
+      "headings": "Tracking-tight, high contrast weights (Medium to Bold), never centered by default.",
+      "body": "Clean, highly legible, leading-relaxed for long-form content.",
+      "labels": "Uppercase, tracking-[0.2em], text-xs to text-sm."
+    }
+  },
+  "colors": {
+    "light_mode": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "primary": "#0F172A",
+      "primary_foreground": "#F8FAFC",
+      "accent_coral": "#FA6B6B",
+      "accent_nexus": "#0EA5E9",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569",
+      "border": "#E2E8F0"
+    },
+    "dark_mode": {
+      "background": "#020817",
+      "surface": "#0F172A",
+      "primary": "#F8FAFC",
+      "primary_foreground": "#020817",
+      "accent_coral": "#FF8787",
+      "accent_nexus": "#38BDF8",
+      "text_primary": "#F8FAFC",
+      "text_secondary": "#94A3B8",
+      "border": "#1E293B"
+    },
+    "rules": "Avoid pure black and pure white. Use deep navy for dark mode to signal government/enterprise security. Use Coral strictly for highlighting 'Coral DPI' related items, and Nexus Blue for AI elements."
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous whitespace. Use p-8 to p-12 inside cards. Section padding py-24 to py-32.",
+    "grid": "Bento grids for feature modules (grid-cols-1 md:grid-cols-12 gap-8).",
+    "alignment": "Optical alignment over geometric. Left-align text blocks. Asymmetrical layouts for storytelling sections."
+  },
+  "components": {
+    "hero_section": "Immersive, text-heavy left (H1 text-5xl md:text-6xl+). Right side features abstract data visualization or high-end architectural/tech imagery.",
+    "cards": "Minimalist. 1px solid border with subtle hover lift (-translate-y-1) and slight shadow. No heavy drop shadows. Crisp corners (rounded-lg or rounded-xl max).",
+    "navigation": "Sticky global nav. Glassmorphism effect (backdrop-blur-xl bg-background/70). Must include language, theme toggle, and search.",
+    "buttons": "Primary: Solid background, contrasting text. Secondary: Outline with transparent background. High contrast hover states.",
+    "cms_admin": "Utilitarian, dense layout. Strict Shadcn component usage. Sidebar nav, minimalist tables, clear hierarchy."
+  },
+  "interactive_ecosystem_map": {
+    "concept": "A 2D interactive node graph built with Framer Motion and SVG.",
+    "layout": "Coral DPI is the central glowing node. SproutOS, AVA HealthOS, etc., orbit around it.",
+    "interactions": "Hovering a node highlights its connection to Coral DPI, dims others, and shows a tooltip or side panel with stats.",
+    "visuals": "Tech-blueprint aesthetic. 1px connecting lines, subtle pulse animations."
+  },
+  "motion": {
+    "scrolling": "Lenis for smooth scrolling.",
+    "entrances": "Staggered fade-up (Framer Motion) for lists and cards.",
+    "micro_interactions": "Subtle border tracing on premium cards. Button arrow translate-x on hover."
+  },
+  "accessibility": {
+    "standards": "WCAG 2.2 AA compliant.",
+    "testing": "All interactive elements MUST include data-testid attribute.",
+    "contrast": "Strict APCA contrast ratio adherence. Focus rings must be highly visible (ring-2 ring-primary ring-offset-2)."
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/10325707/pexels-photo-10325707.png",
+        "category": "abstract_network",
+        "description": "Vibrant orange lines and dots form an abstract network on a dark background, evoking technology and connectivity. Use for dark mode backgrounds or Coral DPI conceptual visualizations."
+      },
+      {
+        "url": "https://images.pexels.com/photos/33410957/pexels-photo-33410957.jpeg",
+        "category": "enterprise_architecture",
+        "description": "Dynamic view of a modern architectural structure featuring glass and steel elements. Use for Government Solutions or Enterprise credibility sections."
+      },
+      {
+        "url": "https://images.pexels.com/photos/934350/pexels-photo-934350.jpeg",
+        "category": "corporate_building",
+        "description": "Low angle view of glass skyscrapers reflecting the bright sun in a clear blue sky. Use for About Us or Investors pages."
+      }
+    ],
+    "logos": "Use monochrome SVG logos for partners to maintain premium aesthetic."
+  },
+  "instructions_to_main_agent": [
+    "Install Google Fonts (Outfit, Manrope, JetBrains Mono) via index.html or CSS imports.",
+    "Ensure the ecosystem map is responsive and accessible.",
+    "Use framer-motion for smooth transitions and hover states.",
+    "Add 'use client' at the top of components needing interactivity.",
+    "All interactive elements MUST include a data-testid attribute in kebab-case."
+  ]
+}
